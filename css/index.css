@@ -30,12 +30,12 @@ header .logo {
   text-decoration: underline;
   display: block;
   position: relative;
-  margin-left: 2%;
+  margin-left: 4%;
 }
 
 header .logo h1::before {
   content: "";
-  background-image: url(../images/logo.jpg);
+  background-image: url(../images/logo.png);
   background-size: 50px 60px;
   width: 50px;
   height: 60px;
@@ -94,6 +94,7 @@ main .banner {
   background-image: url(../images/background-tree.jpg);
   background-position: center;
   background-size: cover;
+  background-origin: padding-box;
   min-height: 520px;
   display: flex;
   justify-content: flex-start;
@@ -103,6 +104,7 @@ main .banner {
 main .banner p {
   font-size: 1.5rem;
   color: var(--accent-color);
+  text-shadow: 3px 5px 4px #000000;
   padding: 7% 40% 0 7%;
 }
 
@@ -239,7 +241,7 @@ input[type="submit"]:hover {
 
 .contact-details h5::before {
   content: "";
-  background-image: url(../images/logo.jpg);
+  background-image: url(../images/logo.png);
   background-size: 30px 30px;
   width: 30px;
   height: 30px;
@@ -294,16 +296,49 @@ p.telephone {
   height: 200px;
 }
 
+@media (max-width: 560px) {
+  main .banner p {
+    font-size: 1rem;
+    padding: 7% 20% 0 7%;
+  }
+
+  main article .blog-article {
+    font-size: 1rem;
+    padding: 15px 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    padding: 25px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 700px) {
   .contact-request {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav.request-form {
+    align-items: center;
+    padding: 0;
+    margin-right: 0;
   }
 
   .contact-details {
-    align-items: center;
+    align-items: flex-start;
+    text-align: justify;
+    padding: 0;
+    margin-left: 15%;
   }
-  .request-form {
-    justify-content: center;
+
+  h3 {
+    text-align: center;
   }
 }
 @media (max-width: 800px) {
@@ -311,12 +346,6 @@ p.telephone {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .logo {
-    align-self: flex-start;
-    padding-left: 8%;
-    order: -1;
   }
 
   .basket {
@@ -331,3 +360,4 @@ p.telephone {
     margin: 0 3% 0 3%;
   }
 }
+
