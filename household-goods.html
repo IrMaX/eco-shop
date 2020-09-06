@@ -1,71 +1,212 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Shop</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Магазин</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/household-goods.css" />
+  </head>
+  <body>
     <header>
-        <div>
-            <img src="images/logo.jpg" alt="Nee day! Logo">
-        </div>
+      <div class="logo">
         <h1>New day!</h1>
         <p>магазин еко-товарів</p>
-        <nav> 
-            <ul>
-                <li><a href="#">Блог</a></li>
-                <li><a href="#">Магазин</a></li>
-                <li><a href="#">Контакти</a></li>
-            </ul>
-            <a href="#"><img src="images/basket.jpg" width="30" height="30" alt="Корзина"></a>
-            <hr>
-        </nav>
-        <div class="green-line">
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#blog">Блог</a></li>
+          <li><a href="#products">Магазин</a></li>
+          <li><a href="#contact">Контакти</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <div>
+          <a
+            class="nav-link openCartLink"
+            href="#modal-cart"
+            data-toggle="modal"
+          >
+            <i class="fas fa-shopping-cart"></i>
+            Cart<span id="cart-badge" class="badge badge-light"></span>
+          </a>
         </div>
+      </nav>
     </header>
-    <main>
-        <h2>Товари для дому</h2>
-        <hr>
-        <img src="images/sponge.jpg" width="300" height="200" alt="Губка-люфа">
-        <h3>Люфа</h3>
-        <p>Це однолітня рослина сімейства гарбузових. Плід трохи схожий на кабачок...</p>
-        <p>40 грн.</p>
-        <a href="#">Детальніше</a>
-        <a href="#">Додати до кошика</a><br>
-        <img src="images/sticks-reusable.jpeg" width="300" height="200" alt="Багаторазові палички">
-        <h3>Багаторазові палички</h3>
-        <p>Бамбукові палички для їжі...</p>
-        <p>60 грн.</p>
-        <a href="#">Детальніше</a>
-        <a href="#">Додати до кошика</a><br>
-        <img src="images/cup.jpg" width="300" height="200" alt="Складне горнятко">
-        <h3>Складне горнятко</h3>
-        <p>Складна силіконова чашка з кришкою. Компактна, містка чашка, виготовлена з харчового силікону. Герметична кришка... </p>
-        <p>350 грн.   280 грн.</p>
-        <a href="#">Детальніше</a>
-        <a href="#">Додати до кошика</a><br>
-        <img src="images/brush.jpg" width="300" height="200" alt="Щітка для посуду">
-        <h3>Щітка для посуду</h3>
-        <p>Ідеальний варіант для миття посуду та чищення будь-яких поверхонь...</p>
-        <p>70 грн.</p>
-        <a href="#">Детальніше</a>
-        <a href="#">Додати до кошика</a><br>
+    <main class="container">
+      <div class="green-line"></div>
+      <section>
+        <h2 id="products">Товари для дому</h2>
+        <div class="row products-container">
+          <!--Products are dynamically generated here-->
+        </div>
+      </section>
     </main>
     <footer>
-        <nav>
-            <map><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2574.6639011341135!2d24.041103915708383!3d49.811186079392336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae7fb6208ab1d%3A0xe74647bd2ff04888!2z0LLRg9C70LjRhtGPINCj0LPQvtGA0YHRjNC60LAsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1597525995323!5m2!1suk!2sua" width="300" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></map>
-            <img src="images/logo.jpg" width="30" height="30" alt="Nee day! Logo">
+      <nav class="contact-details">
+        <div class="company-information">
+          <div class="logo">
             <h5>New day!</h5>
-            <img src="images/address-pointer.png" width="30" height="30" alt="Адреса">
-            <p>м. Львів, вул. Угорська, 25Б </p>
-            <img src="images/telephone-icon.png" width="30" height="30" alt="Телефон">
-            <p>(097) 555 44 22</p>
-            <a href="#"><img src="images/facebook-icon.png" width="30" height="30" alt="Facebook"></a>
-            <a href="#"><img src="images/instagram-icon.png" width="30" height="30" alt="Instagram"></a>
-        </nav>
-        <div class="green-line">
+          </div>
+          <p class="location">м. Львів, вул. Угорська, 25Б</p>
+          <p class="telephone">(097) 555 44 22</p>
+          <div class="map-fb-insta">
+            <div class="fb-instagram">
+              <a href="#"
+                ><img src="images/facebook-icon.png" alt="Facebook"
+              /></a>
+              <a href="#"
+                ><img src="images/instagram-icon.png" alt="Instagram"
+              /></a>
+            </div>
+          </div>
         </div>
+        <div class="map">
+          <map
+            ><iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2574.6639011341135!2d24.041103915708383!3d49.811186079392336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae7fb6208ab1d%3A0xe74647bd2ff04888!2z0LLRg9C70LjRhtGPINCj0LPQvtGA0YHRjNC60LAsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1597525995323!5m2!1suk!2sua"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe
+          ></map>
+        </div>
+      </nav>
+      <div class="green-line"></div>
     </footer>
-</body>
+    <!-- Modal Product Info -->
+    <div
+      class="modal fade"
+      id="productInfoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="productInfoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productInfoLabel">Опис товару</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img class="card-img-top" src="" alt="Product image" />
+            <h4 class="card-title">Product name</h4>
+            <p class="card-text"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-close"
+              data-dismiss="modal"
+            >
+              ← Більше товарів
+            </button>
+            <button class="btn btn-primary buy" data-id="id">До кошика</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Cart -->
+    <div
+      class="modal fade"
+      id="modal-cart"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="cartLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartLabel">Cart</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="cart-product-list-container"></div>
+            <hr />
+            <div class="container">
+              <form class="form-contacts">
+                <div class="form-group row">
+                  <label for="client-name" class="col-4 col-form-label"
+                    >Your name:</label
+                  >
+                  <input
+                    class="form-control col-8"
+                    type="text"
+                    id="client-name"
+                    required
+                  />
+                </div>
+                <div class="form-group row">
+                  <label for="client-email" class="col-4 col-form-label"
+                    >Your email:</label
+                  >
+                  <input
+                    class="form-control col-8"
+                    type="email"
+                    id="client-email"
+                    required
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-close"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button class="btn btn-primary order">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
+      integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+      crossorigin="anonymous"
+    ></script>
+    <script async src="js/alert-window.js"></script>
+    <script defer src="js/products-service.js"></script>
+    <script defer src="js/cart.js"></script>
+    <script defer src="js/product-list.js"></script>
+    <script defer src="js/index.js"></script>
+  </body>
 </html>
