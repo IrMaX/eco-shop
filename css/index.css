@@ -7,6 +7,7 @@
   --main-color: #243e16;
   --main-color-light: #4c7a34;
   --accent-color: #ffffff;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -23,17 +24,18 @@ body {
   background: #dfedd6;
 }
 
-header .logo {
+body > header > div > h1 {
   font-family: "Aguafina Script", cursive;
   color: #355723;
-  font-size: 2rem;
+  font-weight: bold;
+  font-size: 4.4rem;
   text-decoration: underline;
   display: block;
   position: relative;
-  margin-left: 4%;
+  padding: 10px 15px 5px 0px;
 }
 
-header .logo h1::before {
+body > header > div > h1::before {
   content: "";
   background-image: url(../images/logo.png);
   background-size: 50px 60px;
@@ -44,16 +46,19 @@ header .logo h1::before {
   margin-left: -55px;
 }
 
-header .logo p {
+.logo {
+  margin-left: 5%;
+}
+body > header > div > p {
   color: var(--main-color);
   font-size: 14px;
-  margin-top: -15%;
+  margin-top: -10%;
   margin-left: -10%;
 }
 
 header nav .menu {
   display: flex;
-  padding: 0;
+  padding: 0px;
   list-style-type: none;
 }
 
@@ -63,28 +68,34 @@ header {
   align-items: flex-end;
 }
 
-header .basket img {
+body > header > a > img {
   align-self: center;
   width: 60px;
   height: 60px;
+  margin-right: 10%;
+  margin-bottom: 25%;
 }
 
-header nav .menu a {
+body > header > nav > ul > li > a {
   text-decoration: none;
+  font-family: "Courier New", arial;
   font-weight: bold;
   font-size: 1.5rem;
   color: var(--main-color-light);
-  padding: 10px 25px 16px 25px;
+  padding: 10px 25px 25px 25px;
   cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-header nav .menu a:hover {
+body > header > nav > ul > li > a:hover {
+  text-decoration: none;
   background-color: var(--main-color);
   color: #ffffff;
 }
 
-main .green-line,
-footer .green-line {
+body > main > div.green-line,
+body > footer > div {
   margin-top: 0;
   min-height: 20px;
   background-color: var(--main-color);
@@ -92,7 +103,8 @@ footer .green-line {
 
 main .banner {
   background-image: url(../images/background-tree.jpg);
-  background-position: center;
+  font-family: "Courier New", arial;
+  background-position: right;
   background-size: cover;
   background-origin: padding-box;
   min-height: 520px;
@@ -101,51 +113,196 @@ main .banner {
   flex-direction: column;
 }
 
-main .banner p {
+body > main > div.banner > p {
   font-size: 1.5rem;
   color: var(--accent-color);
   text-shadow: 3px 5px 4px #000000;
   padding: 7% 40% 0 7%;
 }
 
-main .banner p:first-child {
+body > main > div.banner > p:nth-child(1) {
   font-weight: bold;
+  font-size: 1.7rem;
 }
 
 main .banner p:nth-child(2) {
   padding-top: 4%;
 }
 
-main article .blog-article {
+#blogCarousel > div > div:nth-child(1) > p,
+#blogCarousel > div > div:nth-child(2) > p {
   display: flex;
   flex-direction: column;
+  font-family: "Courier New", arial;
+  color: #243e16;
   align-items: center;
   text-align: justify;
-  font-size: 1.2rem;
-  padding: 20px 25px;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 20px 35px;
 }
-main article .blog-article img {
-  margin: 3%;
+#blogCarousel > div > div:nth-child(2) > img,
+#blogCarousel > div > div:nth-child(1) > img {
+  margin: 25px auto;
   width: 300px;
   height: 200px;
   border: 1px solid var(--main-color);
 }
-main article div.blog-article img.plastic-marking {
-  margin: 3%;
+img.plastic-marking {
+  margin: 25px auto;
   width: 300px;
   height: 100px;
   border: 1px solid white;
 }
 
-h2 {
+#products,
+#blog,
+#contact {
+  color: var(--main-color);
+  font-family: "Courier New", arial;
   font-weight: bold;
   font-size: 2.6rem;
   text-align: center;
   padding: 25px;
 }
-h3 {
+
+body
+  > main
+  > article
+  > a.carousel-control-prev
+  > span.carousel-control-prev-icon,
+body
+  > main
+  > article
+  > a.carousel-control-next
+  > span.carousel-control-next-icon {
+  height: 30px;
+  width: 30px;
+  margin-top: 1200px;
+  background-color: var(--main-color);
+}
+
+#blogCarousel > div > div:nth-child(1) > h3,
+#blogCarousel > div > div:nth-child(2) > h3,
+#blogCarousel > div > div > form > h3 {
+  margin-top: 20px;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--main-color);
+  font-family: "Courier New", arial;
+}
+
+#blogCarousel
+  > div
+  > div.carousel-item.active
+  > div.plastic-usage
+  > form
+  > div.dayly-use
+  > label,
+#blogCarousel
+  > div
+  > div.carousel-item.active
+  > div.plastic-usage
+  > form
+  > div.monthly-use
+  > label {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--main-color);
+  font-family: "Courier New", arial;
+}
+
+#blogCarousel
+  > div
+  > div.carousel-item.active
+  > div.plastic-usage
+  > div.monthly-use
+  > p,
+#blogCarousel
+  > div
+  > div.carousel-item.active
+  > div.plastic-usage
+  > div.dayly-use
+  > p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--main-color);
+  font-family: "Courier New", arial;
+}
+
+#pastic-bags,
+#plastic-bottles,
+#plastic-appliances,
+#household-chemicals-package,
+#large-pastic-bags,
+#medicine-bottles {
+  width: 200px;
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 6px 0 4px 10px;
+  border: 1px solid var(--main-color);
+  background: white;
+  border-radius: 8px;
+  font-family: "Courier New", arial;
+  margin-bottom: 20px;
+}
+
+.plastic-usage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.calculation {
+  margin-top: 10px;
+  margin-left: 30%;
+}
+
+#blogCarousel > div > div.carousel-item.active > div.calculation > input {
+  width: 200px;
+  height: 40px;
+  font-size: 1.4rem;
+  padding: 6px 0 4px 10px;
+  border: 1px solid #ffb253;
+  background: #fefac0;
+  border-radius: 8px;
+  font-family: "Courier New", arial;
+  margin-bottom: 20px;
+}
+
+#blogCarousel > div > div.carousel-item.active > div.calculation > button {
+  width: 150px;
+  height: 35px;
+  font-size: 1.3rem;
+  border: 1px solid var(--main-color);
+  background: var(--main-color);
+  border-radius: 8px;
+  color: white;
+  font-family: "Courier New", arial;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff6624;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+.time h2 {
+  margin: 0 0 5px;
 }
 
 hr {
@@ -159,6 +316,15 @@ hr {
   grid-gap: 40px;
   grid-template-columns: 1fr 1fr;
   padding-top: 50px;
+}
+
+body > main > section:nth-child(4) > div > a > h3,
+#blogCarousel > div > div.carousel-item.active > h3:nth-child(6) {
+  font-family: "Courier New", arial;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-decoration: underline;
 }
 
 .shop a {
@@ -177,6 +343,14 @@ hr {
   justify-content: space-around;
 }
 
+body > main > section:nth-child(5) > div > nav.request-form > h3 {
+  font-family: "Courier New", arial;
+  color: var(--main-color-light);
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
 nav.request-form {
   display: flex;
   flex-direction: column;
@@ -185,7 +359,20 @@ nav.request-form {
   padding: 15px;
   margin-right: 30px;
 }
-input {
+body
+  > main
+  > section:nth-child(5)
+  > div
+  > nav.request-form
+  > form
+  > input[type="text"]:nth-child(1),
+body
+  > main
+  > section:nth-child(5)
+  > div
+  > nav.request-form
+  > form
+  > input[type="email"]:nth-child(3) {
   width: 300px;
   height: 40px;
   font-size: 1.25rem;
@@ -194,17 +381,25 @@ input {
   background: #dfedd6;
   border-radius: 8px;
   font-family: "Courier New", arial;
+  color: var(--main-color);
   margin-bottom: 20px;
 }
-textarea {
+body > main > section:nth-child(5) > div > nav.request-form > form > textarea {
   font-size: 1.25rem;
   font-family: "Courier New", arial;
+  color: var(--main-color);
   width: 300px;
   height: 100px;
   border-radius: 8px;
 }
 
-input[type="submit"] {
+body
+  > main
+  > section:nth-child(5)
+  > div
+  > nav.request-form
+  > form
+  > input[type="submit"] {
   background-color: #72bb53;
   border: 1px solid var(--main-color);
   border-radius: 8px;
@@ -216,7 +411,13 @@ input[type="submit"] {
   justify-self: center;
 }
 
-input[type="submit"]:hover {
+body
+  > main
+  > section:nth-child(5)
+  > div
+  > nav.request-form
+  > form
+  > input[type="submit"]:hover {
   background-color: var(--main-color-light);
 }
 
@@ -229,14 +430,15 @@ input[type="submit"]:hover {
   margin-right: 30px;
 }
 
-.contact-details .logo {
+body > main > section:nth-child(5) > div > nav.contact-details > div.logo > h5 {
   font-family: "Aguafina Script", cursive;
   color: #355723;
   font-size: 2rem;
   text-decoration: underline;
   display: block;
   position: relative;
-  margin-left: -10px;
+  margin-left: -20px;
+  margin-bottom: 15px;
 }
 
 .contact-details h5::before {
@@ -296,24 +498,81 @@ p.telephone {
   height: 200px;
 }
 
+@media (max-width: 320px) {
+  body > header > nav > ul > li > a {
+    padding: 10px 10px 16px 10px;
+    font-size: 1rem;
+  }
+
+  .shop img {
+    width: 240px;
+    height: 150px;
+  }
+
+  .contact-details {
+    margin-right: 0px;
+  }
+
+  body > header > div > h1 {
+    font-size: 2.4rem;
+  }
+
+  body > header > div > h1::before {
+    background-size: 30px 40px;
+    margin-left: -40px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  body > header > a > img {
+    top: 0px;
+    right: 3%;
+  }
+}
 @media (max-width: 560px) {
-  main .banner p {
+  body > main > div.banner > p {
     font-size: 1rem;
     padding: 7% 20% 0 7%;
   }
 
-  main article .blog-article {
+  #blogCarousel > div > div:nth-child(1) > p,
+  #blogCarousel > div > div:nth-child(2) > p {
     font-size: 1rem;
     padding: 15px 15px;
   }
 
-  h2 {
+  #products,
+  #blog,
+  #contact {
     font-size: 1.8rem;
     padding: 25px;
   }
 
-  h3 {
+  #blogCarousel > div > div:nth-child(1) > h3,
+  #blogCarousel > div > div:nth-child(2) > h3 {
     font-size: 1.2rem;
+  }
+
+  header nav .menu a {
+    padding: 10px 15px 16px 15px;
+    font-size: 1.2rem;
+  }
+
+  .shop img {
+    width: 220px;
+    height: 130px;
+  }
+
+  .plastic-usage {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+  }
+
+  .countdown {
+    font-size: 0.8rem;
   }
 }
 
@@ -334,6 +593,7 @@ p.telephone {
     align-items: flex-start;
     text-align: justify;
     padding: 0;
+    margin-top: 5%;
     margin-left: 15%;
   }
 
@@ -353,6 +613,7 @@ p.telephone {
     order: -1;
     position: absolute;
     top: 5%;
+    right: 5%;
   }
   .shop {
     display: grid;
@@ -360,4 +621,3 @@ p.telephone {
     margin: 0 3% 0 3%;
   }
 }
-

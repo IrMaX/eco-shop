@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap");
+@import url(https://uk.allfont.net/allfont.css?fonts=courier-new);
+
+:root {
+  font-family: "Courier New", arial;
+  color: #243e16;
+  --main-color: #243e16;
+  --main-color-light: #4c7a34;
+  --accent-color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 980px;
+  margin: auto;
+  background: #dfedd6;
+}
+
+body > header > div > h1 {
+  font-family: "Aguafina Script", cursive;
+  color: #355723;
+  font-weight: bold;
+  font-size: 4.4rem;
+  text-decoration: underline;
+  display: block;
+  position: relative;
+  padding: 10px 15px 5px 0px;
+}
+
+body > header > div > h1::before {
+  content: "";
+  background-image: url(../images/logo.png);
+  background-size: 50px 60px;
+  width: 50px;
+  height: 60px;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: -55px;
+}
+
+.logo {
+  margin-left: 5%;
+}
+body > header > div > p {
+  color: var(--main-color);
+  font-size: 14px;
+  margin-top: -10%;
+  margin-left: -10%;
+}
+
+header nav .menu {
+  display: flex;
+  padding: 0px;
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+body > header > a > img {
+  align-self: center;
+  width: 60px;
+  height: 60px;
+  margin-right: 10%;
+  margin-bottom: 25%;
+}
+
+body > header > nav > ul > li > a {
+  text-decoration: none;
+  font-family: "Courier New", arial;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--main-color-light);
+  padding: 10px 25px 25px 25px;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+body > header > nav > ul > li > a:hover {
+  text-decoration: none;
+  background-color: var(--main-color);
+  color: #ffffff;
+}
+
+body > main > div.green-line,
+body > footer > div {
+  margin-top: 0;
+  min-height: 20px;
+  background-color: var(--main-color);
+}
+
+#products {
+  color: var(--main-color);
+  font-family: "Courier New", arial;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-align: left;
+  text-decoration: underline;
+  padding: 25px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.company-information {
+  margin-left: 80px;
+  margin-top: -60px;
+}
+
+body > footer > nav > div.company-information > div.logo > h5 {
+  font-family: "Aguafina Script", cursive;
+  color: #355723;
+  font-size: 2rem;
+  text-decoration: underline;
+  display: block;
+  position: relative;
+  margin-left: -20px;
+  margin-bottom: 15px;
+}
+
+body > main > section:nth-child(5) > div > nav.contact-details > div.logo > h5 {
+  font-family: "Aguafina Script", cursive;
+  color: #355723;
+  font-size: 2rem;
+  text-decoration: underline;
+  display: block;
+  position: relative;
+  margin-left: -20px;
+  margin-bottom: 15px;
+}
+
+.contact-details h5::before {
+  content: "";
+  background-image: url(../images/logo.png);
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: -35px;
+}
+
+.contact-details p.location::before {
+  content: "";
+  background-image: url(../images/address-pointer.png);
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-top: -15px;
+  margin-left: -45px;
+}
+
+p.telephone {
+  padding-top: 25px;
+}
+
+.contact-details p.telephone::before {
+  content: "";
+  background-image: url(../images/telephone-icon.png);
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-top: -15px;
+  margin-left: -45px;
+}
+
+.fb-instagram img {
+  width: 30px;
+  height: 30px;
+  margin-top: 25px;
+}
+
+.map-fb-insta {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: -45px;
+}
+
+.map img {
+  width: 300px;
+  height: 200px;
+}
+
+body > main > section > div > div > div {
+  width: 350px;
+  height: 500px;
+  margin: 10px;
+}
+
+body > main > section > div > div > div > img {
+  width: 300px;
+  height: 230px;
+  border: 1px solid var(--main-color);
+}
+
+body > main > section > div > div > div > div > h4 {
+  font-family: "Courier New", arial;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+body > main > section > div > div > div > div > p {
+  font-size: 0.9rem;
+}
+
+body > main > section > div > div > div > div > div.card-text.flex-fill {
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  color: var(--main-color);
+  font-weight: bold;
+  padding: 7px;
+  margin: 5px 0;
+  width: 200px;
+  height: 22px;
+  border-radius: 7px;
+  background: white;
+}
+
+body
+  > main
+  > section
+  > div
+  > div
+  > div
+  > div
+  > div.d-flex.justify-content-around
+  > button.btn.btn-info {
+  font-family: "Courier New", arial;
+  color: var(--main-color);
+  font-size: 1.1rem;
+  padding: 7px;
+  margin: 5px 0;
+  width: 130px;
+  height: 34px;
+  border-radius: 7px;
+  background: white;
+  border: 1px solid var(--main-color);
+}
+
+body
+  > main
+  > section
+  > div
+  > div
+  > div
+  > div
+  > div.d-flex.justify-content-around
+  > button.btn.btn-primary.buy {
+  font-family: "Courier New", arial;
+  font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
+  padding: 7px;
+  margin: 5px 0;
+  width: 160px;
+  height: 34px;
+  border-radius: 7px;
+  background: var(--main-color);
+  border: 1px solid black;
+  box-shadow: 0 0 5px 2px rgba(122, 122, 122, 0.5);
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 3% 0 3%;
+}
+
+#productInfoModal {
+  width: 500px;
+  height: 600px;
+  margin: 30px;
+  border: 2px solid var(--main-color);
+  position: absolute;
+}
+
+#productInfoModal > div > div > div.modal-body > img {
+  width: 350px;
+  height: 280px;
+  border: 2px solid var(--main-color);
+  margin-left: 70px;
+}
+
+#productInfoModal > div > div > div.modal-body > h4 {
+  font-family: "Courier New", arial;
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+#productInfoModal > div > div > div.modal-body > p {
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 7px;
+}
+
+#productInfoModal
+  > div
+  > div
+  > div.modal-footer
+  > button.btn.btn-secondary.btn-close {
+  font-family: "Courier New", arial;
+  color: var(--main-color);
+  font-size: 1.1rem;
+  padding: 7px;
+  margin: 5px 15px;
+  width: 190px;
+  height: 34px;
+  border-radius: 7px;
+  background: white;
+  border: 1px solid var(--main-color);
+}
+
+#productInfoModal > div > div > div.modal-footer > button.btn.btn-primary.buy {
+  font-family: "Courier New", arial;
+  font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
+  padding: 7px;
+  margin: 5px 0;
+  width: 230px;
+  height: 34px;
+  border-radius: 7px;
+  background: var(--main-color);
+  border: 1px solid black;
+  box-shadow: 0 0 5px 2px rgba(122, 122, 122, 0.5);
+}
+
+#productInfoLabel {
+  display: none;
+}
+
+#productInfoModal > div > div > div.modal-header > button {
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
+  border: 1px solid var(--main-color);
+}
