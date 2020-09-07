@@ -115,11 +115,12 @@ body > footer > div {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .company-information {
   margin-left: 80px;
-  margin-top: -60px;
+  margin-top: -10px;
 }
 
 body > footer > nav > div.company-information > div.logo > h5 {
@@ -169,6 +170,14 @@ body > main > section:nth-child(5) > div > nav.contact-details > div.logo > h5 {
 
 p.telephone {
   padding-top: 25px;
+  color: var(--main-color);
+  font-family: "Courier New", arial;
+}
+
+p.location {
+  font-size: 1.2rem;
+  color: var(--main-color);
+  font-family: "Courier New", arial;
 }
 
 .contact-details p.telephone::before {
@@ -201,15 +210,19 @@ p.telephone {
   height: 200px;
 }
 
-body > main > section > div > div > div {
+body > main > section > div > div:nth-child(1) > div,
+body > main > section > div > div:nth-child(2) > div,
+body > main > section > div > div:nth-child(3) > div,
+body > main > section > div > div:nth-child(4) > div {
   width: 350px;
   height: 500px;
   margin: 10px;
+  background: #dfedd6;
 }
 
 body > main > section > div > div > div > img {
   width: 300px;
-  height: 230px;
+  height: 250px;
   border: 1px solid var(--main-color);
 }
 
@@ -218,6 +231,15 @@ body > main > section > div > div > div > div > h4 {
   color: var(--main-color);
   font-weight: bold;
   font-size: 1.4rem;
+}
+
+body > main > section > a > h2 {
+  font-family: "Courier New", arial;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding-left: 20px;
+  padding-bottom: 15px;
 }
 
 body > main > section > div > div > div > div > p {
@@ -229,10 +251,10 @@ body > main > section > div > div > div > div > div.card-text.flex-fill {
   font-size: 1.2rem;
   color: var(--main-color);
   font-weight: bold;
-  padding: 7px;
+  padding: 4px;
   margin: 5px 0;
   width: 200px;
-  height: 22px;
+  height: 30px;
   border-radius: 7px;
   background: white;
 }
@@ -310,13 +332,21 @@ body
   text-align: center;
 }
 
+body > main > section > div > div > div > div > p,
 #productInfoModal > div > div > div.modal-body > p {
-  font-size: 1.2rem;
+  font-family: "Courier New", arial;
+  color: var(--main-color);
+  font-size: 1rem;
   text-align: left;
   padding: 7px;
 }
 
 #productInfoModal
+  > div
+  > div
+  > div.modal-footer
+  > button.btn.btn-secondary.btn-close,
+#modal-cart
   > div
   > div
   > div.modal-footer
@@ -333,7 +363,8 @@ body
   border: 1px solid var(--main-color);
 }
 
-#productInfoModal > div > div > div.modal-footer > button.btn.btn-primary.buy {
+#productInfoModal > div > div > div.modal-footer > button.btn.btn-primary.buy,
+#modal-cart > div > div > div.modal-footer > button.btn.btn-primary.order {
   font-family: "Courier New", arial;
   font-weight: bold;
   color: white;
@@ -357,4 +388,72 @@ body
   height: 30px;
   font-size: 1.5rem;
   border: 1px solid var(--main-color);
+}
+
+#modal-cart > div > div > div.modal-body > div.container > form > div > label,
+#modal-cart > div > div > div.modal-header {
+  font-family: "Courier New", arial;
+  color: var(--main-color);
+  font-size: 1.1rem;
+}
+#client-name,
+#client-email {
+  width: 300px;
+  height: 40px;
+  font-size: 1.25rem;
+  padding: 6px 0 4px 10px;
+  border: 1px solid var(--main-color);
+  background: #dfedd6;
+  border-radius: 8px;
+  font-family: "Courier New", arial;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+body > header > nav:nth-child(3) > div > a,
+#cart-badge {
+  font-family: "Courier New", arial;
+  color: var(--main-color);
+  font-size: 1.2rem;
+  background: #dfedd6;
+}
+
+@media (max-width: 320px) {
+  body > header > nav > ul > li > a {
+    padding: 10px 10px 16px 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  body > header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map img {
+    width: 250px;
+    height: 180px;
+  }
+
+  body > main > section > div > div:nth-child(1) > div,
+  body > main > section > div > div:nth-child(2) > div,
+  body > main > section > div > div:nth-child(3) > div,
+  body > main > section > div > div:nth-child(4) > div {
+    width: 270px;
+    height: 450px;
+    margin: 20px;
+    background: #dfedd6;
+  }
+
+  body > main > section > div > div > div > div > p {
+    display: none;
+  }
 }
