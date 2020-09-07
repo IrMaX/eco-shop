@@ -110,7 +110,7 @@ class Cart {
           if (response.status === 200) {
             return response.text();
           } else {
-            throw new Error("Cannot send form");
+            throw new Error("Неможливо надіслати форму");
           }
         })
         .then((responseText) => {
@@ -119,12 +119,12 @@ class Cart {
           this.saveCart();
           this.updateBadge();
           this.renderCart();
-          window.showAlert("Thank you! " + responseText);
+          window.showAlert("Дякуємо за замовлення " + responseText);
           this.cartContainer.querySelector(".btn-close").click();
         })
-        .catch((error) => showAlert("There is an error: " + error, false));
+        .catch((error) => showAlert("Помилка: " + error, false));
     } else {
-      window.showAlert("Please fill form correctly", false);
+      window.showAlert("Заповніть, будь ласка, форму коректно", false);
     }
   }
 }

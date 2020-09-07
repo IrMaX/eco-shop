@@ -418,6 +418,16 @@ body > header > nav:nth-child(3) > div > a,
   background: #dfedd6;
 }
 
+#modal-cart > div > div > div.modal-body{
+  font-family: "Courier New", arial;
+  color: var(--main-color);
+  font-size: 1.2rem; 
+}
+
+#cartLabel{
+  font-family: "Courier New", arial;  
+}
+
 @media (max-width: 320px) {
   body > header > nav > ul > li > a {
     padding: 10px 10px 16px 10px;
